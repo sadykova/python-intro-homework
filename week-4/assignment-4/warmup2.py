@@ -11,5 +11,5 @@ for key, value in student.items():
     print(f"Printing ... {key}: {value}")
 
 # add a new key
-student["graduated"] = "False" 
+student["graduated"] = False 
 print(student)
