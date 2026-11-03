@@ -17,12 +17,40 @@ while True:
             if number < min:
                 min = number
         print(f"The smallest value is {min}.")
-        break
-    if option == 2:
+    elif option == 2:
         for number in numbers:
             if number > max:
                 max = number
         print(f"The biggest value is {max}.")
+    elif option == 3:
+        target = int(input("Enter a number to search for: "))
+        index = -1
+        for i in range(len(numbers)):
+            if numbers[i]==target:
+                index=i
+                break
+        if index != -1:
+            print(f"Found '{target}' at index {index}")
+        else:
+            print(f"'{target}' was not found in the list.")
+    elif option == 4:
+        n=len(numbers)
+        for i in range(n-1):
+            swapped=False
+            for j in range(n-i-1):
+                if numbers[j]>numbers[j+1]:
+                    numbers[j],numbers[j+1] = numbers[j+1],numbers[j]
+                    swapped=True
+            if not swapped:
+                break
+        print(numbers)
+    elif option == 5:
+        print("Program terminated.Thank you and Goodbye!")
         break
+   
+        
+
+
+
     
     
