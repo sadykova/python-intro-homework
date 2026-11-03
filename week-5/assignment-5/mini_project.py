@@ -10,18 +10,18 @@ while True:
     5. Quit
  ''')
     option = int(input("Choose an option (1-5):"))
-    min = float('inf')
-    max = float("-inf")
+    smallest = float('inf')
+    largest = float("-inf")
     if option == 1:
         for number in numbers:
-            if number < min:
-                min = number
-        print(f"The smallest value is {min}.")
+            if number < smallest:
+                smallest = number
+        print(f"The smallest value is {smallest}.")
     elif option == 2:
         for number in numbers:
-            if number > max:
-                max = number
-        print(f"The biggest value is {max}.")
+            if number > largest:
+                largest = number
+        print(f"The biggest value is {largest}.")
     elif option == 3:
         target = int(input("Enter a number to search for: "))
         index = -1
