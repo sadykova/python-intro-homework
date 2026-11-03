@@ -10,14 +10,15 @@ while True:
     5. Quit
  ''')
     option = int(input("Choose an option (1-5):"))
-    smallest = float('inf')
-    largest = float("-inf")
+    
     if option == 1:
+        smallest = float('inf')
         for number in numbers:
             if number < smallest:
                 smallest = number
         print(f"The smallest value is {smallest}.")
     elif option == 2:
+        largest = float("-inf")
         for number in numbers:
             if number > largest:
                 largest = number
