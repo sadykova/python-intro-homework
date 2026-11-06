@@ -38,7 +38,6 @@ def search(numbers,target):
     if index != -1:
         return index   
     else:
-        print(f"'{target}' was not found in the list.")
         return -1
         
 #print(search(numbers, 42))
@@ -48,16 +47,16 @@ def bubble_sort(numbers):
     Performs the Bubble sort
     """
     n=len(numbers)
-    reversed = numbers.copy()
+    sorted = numbers.copy()
     for i in range(n-1):
         swapped=False
         for j in range(n-i-1):
-            if reversed[j]>reversed[j+1]:
-                reversed[j],reversed[j+1] = reversed[j+1],reversed[j]
+            if sorted[j]>sorted[j+1]:
+                sorted[j],sorted[j+1] = sorted[j+1],sorted[j]
                 swapped=True
         if not swapped:
             break
-    print(f"The reversed list is: {reversed}")
+    print(f"The reversed list is: {sorted}")
     return reversed
 
 #print(bubble_sort(numbers))
@@ -74,7 +73,7 @@ def show_menu():
     4. Sort the list
     5. Quit
  ''')
-    option = int(input("Choose an option (1-5):"))
+    option = input("Choose an option (1-5):")
     return option
 
 def main(numbers):
@@ -83,22 +82,22 @@ def main(numbers):
     """
     while True:
         option=show_menu()  
-        if option == 1:
+        if option == "1":
            smallest=find_min(numbers)
            print(f"The smallest value is {smallest}.")
-        elif option==2:
+        elif option == "2":
             largest=find_max(numbers)
             print(f"The largest value is {largest}.")
-        elif option ==3:
+        elif option == "3":
             target = int(input("Enter a number to search for: "))
             index = search(numbers,target)
             if index != -1:
                 print(f"Found '{target}' at index {index}")
             else:
                  print(f"'{target}' was not found in the list.")
-        elif option==4:
+        elif option == "4":
             bubble_sort(numbers)
-        elif option == 5:
+        elif option == "5":
             print("Program terminated.Thank you and Goodbye!")
             break
 
