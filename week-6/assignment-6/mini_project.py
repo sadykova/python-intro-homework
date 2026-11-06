@@ -51,16 +51,15 @@ def bubble_sort(numbers):
     Performs the Bubble sort
     """
     n=len(numbers)
-    reversed = []
+    reversed = numbers.copy()
     for i in range(n-1):
         swapped=False
         for j in range(n-i-1):
-            if numbers[j]>numbers[j+1]:
-                numbers[j],numbers[j+1] = numbers[j+1],numbers[j]
+            if reversed[j]>reversed[j+1]:
+                reversed[j],reversed[j+1] = reversed[j+1],reversed[j]
                 swapped=True
         if not swapped:
             break
-    reversed = numbers
     print(f"The reversed list is: {reversed}")
     return reversed
 
