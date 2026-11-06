@@ -38,7 +38,6 @@ def search(numbers,target):
             index=i
             break
     if index != -1:
-        print(f"Found '{target}' at index {index}")
         return index   
     else:
         print(f"'{target}' was not found in the list.")
@@ -92,7 +91,11 @@ def main(numbers):
             find_max(numbers)
         elif option ==3:
             target = int(input("Enter a number to search for: "))
-            search(numbers,target)
+            index = search(numbers,target)
+            if index != -1:
+                print(f"Found '{target}' at index {index}")
+            else:
+                 print(f"'{target}' was not found in the list.")
         elif option==4:
             bubble_sort(numbers)
         elif option == 5:
