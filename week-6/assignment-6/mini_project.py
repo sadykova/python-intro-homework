@@ -56,7 +56,6 @@ def bubble_sort(numbers):
                 swapped=True
         if not swapped:
             break
-    print(f"The sorted list is: {sorted}")
     return sorted
 
 #print(bubble_sort(numbers))
@@ -76,7 +75,7 @@ def show_menu():
     option = input("Choose an option (1-5):")
     return option
 
-def main(numbers):
+def main():
     """
     Coordinates the program based on user choice
     """
@@ -96,13 +95,14 @@ def main(numbers):
             else:
                  print(f"'{target}' was not found in the list.")
         elif option == "4":
-            bubble_sort(numbers)
+            sorted = bubble_sort(numbers)
+            print(f"The sorted list is: {sorted}")
         elif option == "5":
             print("Program terminated.Thank you and Goodbye!")
             break
 
 
-main(numbers)
+main()
 
 
 
