@@ -9,7 +9,6 @@ def find_min(numbers):
     for number in numbers:
         if number < smallest:
             smallest = number
-    print(f"The smallest value is {smallest}.")
     return smallest
     
 #print(find_min(numbers))
@@ -22,7 +21,6 @@ def find_max(numbers):
     for number in numbers:
         if number > largest:
             largest = number
-    print(f"The largest value is {largest}.")
     return largest
     
 
@@ -86,9 +84,11 @@ def main(numbers):
     while True:
         option=show_menu()  
         if option == 1:
-           find_min(numbers)
+           smallest=find_min(numbers)
+           print(f"The smallest value is {smallest}.")
         elif option==2:
-            find_max(numbers)
+            largest=find_max(numbers)
+            print(f"The largest value is {largest}.")
         elif option ==3:
             target = int(input("Enter a number to search for: "))
             index = search(numbers,target)

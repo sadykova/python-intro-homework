@@ -19,6 +19,6 @@ def fahrenheit_to_celsius(f):
     :param c: converts Fahrenheit to Celsius using (f - 32) * 5/9
 
     '''
-    return f"{f}F = {((f - 32) * 5/9):.1f}F"
+    return f"{f}F = {((f - 32) * 5/9):.1f}C"
 
 print(fahrenheit_to_celsius(72))
