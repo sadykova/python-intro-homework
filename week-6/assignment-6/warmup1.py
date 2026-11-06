@@ -1,5 +1,5 @@
 #Default parameters
-def greet(name, greeting="Ahoy there"):
+def greet(name, greeting="Hello"):
     '''
     Prints a greeting.
     
