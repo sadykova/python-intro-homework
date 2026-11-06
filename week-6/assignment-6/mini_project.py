@@ -56,8 +56,8 @@ def bubble_sort(numbers):
                 swapped=True
         if not swapped:
             break
-    print(f"The reversed list is: {sorted}")
-    return reversed
+    print(f"The sorted list is: {sorted}")
+    return sorted
 
 #print(bubble_sort(numbers))
 
