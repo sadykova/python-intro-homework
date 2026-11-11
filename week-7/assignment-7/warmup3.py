@@ -4,7 +4,7 @@ import os
 print(os.getcwd())
 
 #check whether expenses.csv is in the current directory
-if os.path.exists("expenses.csv"):
+if os.path.exists("../data/expenses.csv"):
     print("expenses.csv found.")
 else:
     print("expenses.csv not found.")

@@ -6,10 +6,10 @@ from datetime import datetime
 import sys
 
 #verify expenses.csv exists
-try:
-    if os.path.exists("../data/expenses.csv"):
-        print("expenses.csv found.")
-except FileNotFoundError:
+
+if os.path.exists("../data/expenses.csv"):
+    print("expenses.csv found.")
+else:
     print("expenses.csv not found.")
     sys.exit()
 
