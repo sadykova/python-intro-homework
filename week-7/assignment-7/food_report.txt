@@ -1,4 +1,4 @@
-Food Expense Report — generated today's date as November 11, 2026
+Food Expense Report — generated November 11, 2026
 2024-03-01: $54.3
 2024-03-03: $8.75
 2024-03-05: $42.0
