@@ -3,12 +3,15 @@
 import os
 import csv
 from datetime import datetime
+import sys
 
 #verify expenses.csv exists
-if os.path.exists("../data/expenses.csv"):
-    print("Found it!")
-else:
-    print("Error: File not found.")
+try:
+    if os.path.exists("../data/expenses.csv"):
+        print("expenses.csv found.")
+except FileNotFoundError:
+    print("expenses.csv not found.")
+    sys.exit()
 
 # read the file into a list of dictionaries
 with open('../data/expenses.csv','r') as file:
@@ -26,12 +29,11 @@ with open('../data/expenses.csv','r') as file:
     print(total)
 
     with open('food_report.txt', 'w', newline ='') as file:
-        writer = csv.writer(file)
         now = datetime.now()
-        writer.writerow(f"Food Expense Report — generated today's date as {now.strftime('%B %d, %Y')}")
+        file.write(f"Food Expense Report — generated today's date as {now.strftime('%B %d, %Y')}\n")
         for expense in food_expenses:
-            writer.writerow(f"{expense['date']}: ${expense['amount']}" )
-        writer.writerow(f"Total: {total:.2f}")
+            file.write(f"{expense['date']}: ${expense['amount']}\n" )
+        file.write(f"Total: ${total:.2f}\n")
 
 
 
