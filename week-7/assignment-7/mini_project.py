@@ -24,15 +24,12 @@ with open('../data/expenses.csv','r') as file:
             food_expenses.append(row)
     for expense in food_expenses:
         total += expense['amount']
-    print(food_expenses)
-    print(type(row['amount']))
-    print(total)
 
     with open('food_report.txt', 'w', newline ='') as file:
         now = datetime.now()
         file.write(f"Food Expense Report — generated {now.strftime('%B %d, %Y')}\n")
         for expense in food_expenses:
-            file.write(f"{expense['date']}: ${expense['amount']}\n" )
+            file.write(f"{expense['date']}: ${expense['amount']:.2f}\n" )
         file.write(f"Total: ${total:.2f}\n")
 
 
