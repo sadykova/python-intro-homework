@@ -38,7 +38,7 @@ try:
         except KeyError as e:
             skipped_rows.append(row)
             errors.append(f"Row {i}: extra column detected - skipped")
-            skipped_rows +=1
+            skipped +=1
 
     #Summary
     print("\n--- CSV REPORT ---")
