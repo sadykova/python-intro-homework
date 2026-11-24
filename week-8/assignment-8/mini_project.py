@@ -37,7 +37,7 @@ try:
         
         except KeyError as e:
             skipped_rows.append(row)
-            errors.append(f"Row {i}: extra column detected - skipped")
+            errors.append(f"Row {i}: Missing column")
             skipped +=1
 
     #Summary
